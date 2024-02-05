@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+// import { Container, Row, Col, Button } from 'react-bootstrap';
+import "./App.css"; 
+import Numbers from './components/Numbers.js';
+import Screen from './components/Screen.js';
+import NumButtons from './components/NumButtons.js';
+
 
 function App() {
-  const texto = "Hello World";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          {texto}
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button type="submit">Get Started</button>
-        </a>
-      </header>
+    <div className="container form-control-sm">
+    <h1 className='text-center'>Calculadora con JS</h1>
+    <Screen/>
+    <NumButtons/>
+    <Numbers/>
     </div>
+    
   );
 }
 
