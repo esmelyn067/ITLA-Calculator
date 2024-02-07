@@ -10,7 +10,8 @@ export function App() {
 
   return (
     <>
-    <div className="form1 form-control-m">
+    <div className="container form1 form-control-m">
+    <h1 className='text-center'>Calculadora con JS</h1>
     <NumButtons/>
     <Numbers/>  
     </div>
