@@ -8,75 +8,74 @@ import BtnClear from './BtnClear.jsx';
 
 
 const NumButtons =()=>{
- 
-   // state = {
-   //    operandoA: "",
-   //    operandoB: "",
-   //    operacion: "",
-   //    resultado: "",
-   //  };
-  
+   
+    state = {
+      operandoA:'',
+      operandoB:'',
+      operacion:'',
+      resultado:''
+    };
 
-   // handleClickButton = (valor) => {
-   //    switch (valor) {
-   //      case "0":
-   //      case "1":
-   //      case "2":
-   //      case "3":
-   //      case "4":
-   //      case "5":
-   //      case "6":
-   //      case "7":
-   //      case "8":
-   //      case "9":
-   //        if (this.state.operacion === "") {
-   //          this.setState({ operandoA: this.state.operandoA + valor });
-   //        } else {
-   //          this.setState({ operandoB: this.state.operandoB + valor });
-   //        }
-   //        break;
-   //      case "+":
-   //      case "-":
-   //      case "*":
-   //      case "/":
-   //        this.setState({ operacion: valor });
-   //        break;
-   //      case "=":
-   //        const resultado = eval(this.state.operandoA + this.state.operacion + this.state.operandoB);
-   //        this.setState({ resultado });
-   //        break;
-   //      case "C":
-   //        this.setState({ operandoA: "0", operandoB: "", operacion: "", resultado: "0" });
-   //        break;
-   //      case "Clear":
-   //        this.setState({ resultado: "" });
-   //        break;
-   //    }
-   //  };
-  
+    handleClickButton = (valor) => {
+      switch (valor) {
+        case "0":
+        case "1":
+        case "2":
+        case "3":
+        case "4":
+        case "5":
+        case "6":
+        case "7":
+        case "8":
+        case "9":
+          if (this.state.operacion === "") {
+            this.setState({ operandoA: this.state.operandoA + valor });
+          } else {
+            this.setState({ operandoB: this.state.operandoB + valor });
+          }
+          break;
+        case "+":
+        case "-":
+        case "*":
+        case "/":
+          this.setState({ operacion: valor });
+          break;
+        case "=":
+          const resultado = eval(this.state.operandoA + this.state.operacion + this.state.operandoB);
+          this.setState({ resultado });
+          break;
+        case "C":
+          this.setState({ operandoA: "", operandoB: "", operacion: "", resultado: "" });
+          break;
+        case "Clear":
+          this.setState({ resultado: "" });
+          break;
+      }
+    };
+   
     return(
        <div className='container btnnumber mx-auto'>
-    <Screen/>
+    <Screen value={this.state.resultado}/>
        <div className='col-3'>
-       <button className='number'>7</button>
-       <button className='number'>4</button>
-       <button className='number'>1</button>
-       <Cbutton/>
+       <button className='number' onClick={this.handleClickButton} >7</button>
+       <button className='number' onClick={this.handleClickButton} >4</button>
+       <button className='number' onClick={this.handleClickButton} >1</button>
+       <Cbutton onClick={this.handleClickButton}/>
        </div>
        <div className='col-3'>
-       <button className='number'>8</button>
-       <button className='number'>5</button>
-       <button className='number'>2</button>
-       <button className='number'>0</button>
+       <button className='number' onClick={this.handleClickButton} >8</button>
+       <button className='number' onClick={this.handleClickButton} >5</button>
+       <button className='number' onClick={this.handleClickButton} >2</button>
+       <button className='number' onClick={this.handleClickButton} >0</button>
        </div>
        <div className='col-3'>
-       <button className='number'>9</button>
-       <button className='number'>6</button>
-       <button className='number'>3</button>
-       <Bnequal/>
+       <button className='number' onClick={this.handleClickButton} >9</button>
+       <button className='number' onClick={this.handleClickButton} >6</button>
+       <button className='number' onClick={this.handleClickButton} >3</button>
+       <Bnequal onClick={this.handleClickButton}/>
        </div>
-       <Operations/>
-       <BtnClear/>
+       <Operations onClick={this.handleClickButton}/>
+       <BtnClear onClick={this.handleClickButton}/>
        </div>
     )
 }

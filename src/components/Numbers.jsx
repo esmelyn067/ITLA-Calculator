@@ -2,12 +2,6 @@ import React from 'react';
 
 const Numbers = ()=>{
 
- renderButtons = () => {
-        const botones = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "+", "-", "*", "/", "=", "C", "Clear"];
-        return botones.map((boton) => (
-          <Button key={boton} value={boton} onClick={this.handleClickButton} />
-        ));
-      };
 
         // return (
            

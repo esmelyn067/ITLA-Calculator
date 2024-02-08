@@ -5,8 +5,7 @@ import NumButtons from './components/NumButtons.jsx';
 import './app.css'
 
 export function App() {
-  // const [count, setCount] = useState(0)
-
+  
   return (
     <>
     <div className="container form1 form-control-m">
