@@ -2,7 +2,7 @@ import React from 'react';
 
 const BtnClear =()=>{
     return(
-        <div className='row'>
+        <div className='mx-auto cls'>
             <button>Limpiar</button>
         </div>
     )
