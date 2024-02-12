@@ -1,8 +1,9 @@
 import React from 'react';
 
 const Cbutton =()=>{
+
     return(
-        <button className ='number'>C</button>
+        <button className ='number c-color'>C</button>
     )
 }
 

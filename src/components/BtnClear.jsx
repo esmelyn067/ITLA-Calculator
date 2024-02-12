@@ -1,9 +1,10 @@
 import React from 'react';
 
 const BtnClear =()=>{
+ 
     return(
-        <div className='mx-auto cls'>
-            <button>Limpiar</button>
+        <div className='mx-auto'>
+            <button className='cls'>Limpiar</button>
         </div>
     )
 }

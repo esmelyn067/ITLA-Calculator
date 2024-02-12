@@ -4,7 +4,7 @@ import Screen from './Screen';
 
 
 class NumButtons2 extends React.Component {
-   
+  
     state = {
         operandoA: "",
         operandoB: "",
@@ -41,9 +41,9 @@ class NumButtons2 extends React.Component {
             this.setState({ resultado });
             break;
           case "C":
-            this.setState({ operandoA: "", operandoB: "", operacion: "", resultado: "" });
+            this.setState({ operandoA: "", operandoB: "", operacion: "", resultado: "0" });
             break;
-          case "Clear":
+          case "Limpiar":
             this.setState({ resultado: "" });
             break;
         }
@@ -52,15 +52,14 @@ class NumButtons2 extends React.Component {
     renderButtons = () => {
       const botones = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "+", "-", "*", "/", "=", "C", "Clear"];
       return botones.map((boton) => (
-        <button className='number' key={boton} value={boton} onClick={this.handleClickButton} />
+        <button key={boton} value={boton} onClick={this.handleClickButton} />
       ));
     };
   
     render() {
       return (
         <div>
-          <Screen resultado={this.state.resultado} />
-          {this.renderButtons()}
+          <Screen resultado={this.state.resultado}/>
         </div>
       );
     }
